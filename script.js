@@ -1,6 +1,9 @@
 const bgElements = ['❤️', '💖', '67', '💕', '67'];
+let customBg = null;
+
 function createBgElement() {
-    const el = document.createElement('div'); el.classList.add('bg-element'); el.innerText = bgElements[Math.floor(Math.random() * bgElements.length)];
+    const el = document.createElement('div'); el.classList.add('bg-element');
+    el.innerText = customBg ? customBg[Math.floor(Math.random() * customBg.length)] : bgElements[Math.floor(Math.random() * bgElements.length)];
     el.style.left = Math.random() * 100 + "vw"; el.style.fontSize = Math.random() * 16 + 16 + "px"; el.style.animationDuration = Math.random() * 3 + 5 + "s";
     document.body.appendChild(el); setTimeout(() => el.remove(), 8000);
 }
@@ -43,4 +46,18 @@ reasons.forEach((text, index) => {
     card.addEventListener('click', () => card.classList.toggle('flipped')); grid.appendChild(card);
 });
 
-const envelope = document.getElementById('secretEnvelope'); envelope.addEventListener('click', () => envelope.classList.toggle('open'));
+const envelope = document.getElementById('secretEnvelope'); 
+envelope.addEventListener('click', (e) => {
+    if(e.target.id === 'magicBtn') return;
+    envelope.classList.toggle('open');
+});
+
+// Логика секретной внутренней кнопки
+document.getElementById('magicBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.getElementById('mailContent').innerHTML = "<span style='font-size:0.75rem; display:block; line-height:1.3;'>Юля + Я = 67%?<br><b style='color:#ff3366; font-size:0.9rem;'>Нет, мы на все 1000%! ♾️</b></span>";
+    customBg = ['67', '💯', '💖', '67', '✨'];
+    document.body.style.transition = 'all 0.5s';
+    document.body.style.filter = 'saturate(1.5)';
+    setTimeout(() => { document.body.style.filter = 'none'; }, 500);
+});
