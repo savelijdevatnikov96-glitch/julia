@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юля ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="glass-panel">
+            <div class="photo-frame">
+                <img class="love-slide active" src="photo1.jpg" alt="1">
+                <img class="love-slide" src="photo2.jpg" alt="2">
+                <img class="love-slide" src="photo3.jpg" alt="3">
+                <img class="love-slide" src="photo4.jpg" alt="4">
+                <img class="love-slide" src="photo5.jpg" alt="5">
+            </div>
+            <h1 id="question">Юля, ты разделишь со мной этот мир?</h1>
+            <p id="subtext">Я безумно рад, что ты есть у меня. Моё сердце выбирает только тебя.</p>
+            <div class="buttons"><button id="yesBtn">Да!</button><button id="noBtn">Нет</button></div>
+        </div>
+        <div class="glass-panel">
+            <h2>Наши важные даты 📅</h2>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-date">17.10.25 💬</div><div class="timeline-text">День нашего знакомства</div></div>
+                <div class="timeline-item"><div class="timeline-date">23.10.25 🗺️</div><div class="timeline-text">Наша первая прогулка</div></div>
+                <div class="timeline-item">
+                    <div class="timeline-date">11.01.26 💍</div><div class="timeline-text">Начало наших отношений</div>
+                    <div class="timer-container">
+                        <div class="timer-block"><span class="timer-number" id="days">0</span><span class="timer-label">дней</span></div>
+                        <div class="timer-block"><span class="timer-number" id="hours">0</span><span class="timer-label">часов</span></div>
+                        <div class="timer-block"><span class="timer-number" id="minutes">0</span><span class="timer-label">минут</span></div>
+                        <div class="timer-block"><span class="timer-number" id="seconds">0</span><span class="timer-label">секунд</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="glass-panel">
+            <h2>10 причин моей любви 💕</h2>
+            <p style="font-size: 0.85rem; color: #777; margin-bottom: 12px;">Нажимай на карточки, чтобы открыть их</p>
+            <div class="reasons-grid"></div>
+        </div>
+        <div class="glass-panel">
+            <h2>Тебе пришло письмо ✉️</h2>
+            <p style="font-size: 0.85rem; color: #777; margin-bottom: 8px;">Нажми на конверт, чтобы открыть</p>
+            <div class="envelope-wrapper" id="secretEnvelope">
+                <div class="letter">
+                    <div class="letter-text">
+                        Я буду любить тебя всегда несмотря ни на что. Ты - самое ценное что у меня есть. Я люблю тебя!
+                        <a href="https://t.me" target="_blank" class="letter-link">Написать любимому ❤️</a>
+                    </div>
+                </div>
+                <div class="envelope"></div><div class="envelope-heart">❤️</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
