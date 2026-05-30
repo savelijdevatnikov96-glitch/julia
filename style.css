@@ -47,3 +47,18 @@ button { padding: 12px 30px; font-size: 1.1rem; font-weight: 700; border: none; 
 @keyframes heartPulse { 0% { transform: scale(1); } 20% { transform: scale(1.25); } 40% { transform: scale(1); } 60% { transform: scale(1.2); } 100% { transform: scale(1); } }
 .celebrate-heart { position: fixed; color: #ff4b6e; font-size: 20px; opacity: 0; animation: floatUpCelebrate 4s linear forwards; pointer-events: none; z-index: 99; }
 @keyframes floatUpCelebrate { 0% { transform: translateY(100vh) rotate(0deg) scale(0); opacity: 1; } 100% { transform: translateY(-10vh) rotate(360deg) scale(1.5); opacity: 0; } }
+.qr-frame {
+    width: 180px;
+    height: 180px;
+    margin: 10px auto 5px;
+    background: white;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(255, 51, 102, 0.15);
+}
+.qr-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
